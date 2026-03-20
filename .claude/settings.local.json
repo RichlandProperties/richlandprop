@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ASSETS=\"c:/Users/Hoengager/OneDrive/Documents/River Flow/Richland Property/richlandwebsite/assets\")",
+      "Read(//c/Users/Hoengager/OneDrive/Documents/River Flow/Richland Property/richlandwebsite/**)",
+      "Read(//c/Users/Hoengager/OneDrive/Documents/River Flow/Richland Property/richlandwebsite/$ASSETS/**)",
+      "Bash(git config:*)",
+      "Bash(git -C \"c:/Users/Hoengager/OneDrive/Documents/River Flow/Richland Property/richlandwebsite\" remote -v)"
+    ]
+  }
+}
