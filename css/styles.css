@@ -55,8 +55,8 @@
 
   /* Layout */
   --max-width:        1200px;
-  --nav-height:       96px;
-  --nav-height-small: 72px;
+  --nav-height:       260px;
+  --nav-height-small: 140px;
   --border-radius:    8px;
   --border-radius-lg: 16px;
 
@@ -278,6 +278,9 @@ input, textarea, select {
   right: 0;
   z-index: 1000;
   height: var(--nav-height);
+  background: linear-gradient(to right, rgba(255,255,255,0.90) 0%, rgba(255,255,255,0.55) 35%, rgba(255,255,255,0.0) 65%);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   transition: height var(--transition-base),
               background-color var(--transition-base),
               backdrop-filter var(--transition-base),
@@ -287,10 +290,30 @@ input, textarea, select {
 /* State added by JS when user scrolls down */
 .nav-header.scrolled {
   height: var(--nav-height-small);
-  background-color: rgba(11, 29, 51, 0.95);
+  background-color: rgba(250, 247, 242, 0.97);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  box-shadow: 0 2px 20px rgba(0,0,0,0.25);
+  box-shadow: 0 2px 16px rgba(0,0,0,0.12);
+}
+
+.nav-header.scrolled .nav-link {
+  color: rgba(11, 29, 51, 0.8);
+}
+.nav-header.scrolled .nav-link:hover {
+  color: var(--color-navy);
+}
+.nav-header.scrolled .lang-toggle {
+  border-color: rgba(11, 29, 51, 0.35);
+  color: rgba(11, 29, 51, 0.8);
+}
+.nav-header.scrolled .lang-toggle:hover {
+  background-color: rgba(11, 29, 51, 0.08);
+  border-color: rgba(11, 29, 51, 0.6);
+  color: var(--color-navy);
+}
+
+.nav-header.scrolled .nav-logo-img {
+  height: 120px;
 }
 
 .nav-container {
@@ -298,9 +321,9 @@ input, textarea, select {
   align-items: center;
   justify-content: space-between;
   height: 100%;
-  max-width: var(--max-width);
-  margin-inline: auto;
-  padding-inline: var(--space-xl);
+  width: 100%;
+  padding-left: 0;
+  padding-right: var(--space-xl);
   gap: var(--space-lg);
 }
 
@@ -314,19 +337,11 @@ input, textarea, select {
 }
 
 .nav-logo-img {
-  height: 88px;
+  height: 252px;
   width: auto;
   display: block;
   object-fit: contain;
   flex-shrink: 0;
-  -webkit-mask-image:
-    linear-gradient(to bottom, transparent 0%, black 40%, black 62%, transparent 100%),
-    linear-gradient(to right, transparent 0%, black 18%, black 82%, transparent 100%);
-  -webkit-mask-composite: source-in;
-  mask-image:
-    linear-gradient(to bottom, transparent 0%, black 40%, black 62%, transparent 100%),
-    linear-gradient(to right, transparent 0%, black 18%, black 82%, transparent 100%);
-  mask-composite: intersect;
 }
 
 /* Desktop nav links */
@@ -1330,7 +1345,7 @@ a.contact-detail-value:hover { color: var(--color-maroon); }
 /* ── 480px and below (small mobile) ── */
 @media (max-width: 480px) {
 
-  .nav-logo-img { height: 68px; }  /* slightly smaller logo on very small screens */
+  .nav-logo-img { height: 189px; }  /* slightly smaller logo on very small screens */
 
   .hero-headline { font-size: 2rem; }
   .hero-stats    { padding-block: var(--space-md); }
