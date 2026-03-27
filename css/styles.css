@@ -55,8 +55,8 @@
 
   /* Layout */
   --max-width:        1200px;
-  --nav-height:       80px;
-  --nav-height-small: 64px;
+  --nav-height:       96px;
+  --nav-height-small: 72px;
   --border-radius:    8px;
   --border-radius-lg: 16px;
 
@@ -231,7 +231,7 @@ input, textarea, select {
 /* Gold filled button */
 .btn-gold {
   background-color: var(--color-maroon);
-  color: var(--color-navy);
+  color: var(--color-white);
   border-color: var(--color-maroon);
 }
 .btn-gold:hover {
@@ -313,27 +313,20 @@ input, textarea, select {
   flex-shrink: 0;
 }
 
-.nav-logo-mark {
-  width: 38px;
-  height: 38px;
-  border-radius: var(--border-radius);
-  background-color: var(--color-maroon);
-  color: var(--color-navy);
-  font-family: var(--font-serif);
-  font-size: 1.25rem;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.nav-logo-img {
+  height: 88px;
+  width: auto;
+  display: block;
+  object-fit: contain;
   flex-shrink: 0;
-}
-
-.nav-logo-text {
-  font-family: var(--font-serif);
-  font-size: 1.0625rem;
-  font-weight: 600;
-  color: var(--color-white);
-  line-height: 1.2;
+  -webkit-mask-image:
+    linear-gradient(to bottom, transparent 0%, black 40%, black 62%, transparent 100%),
+    linear-gradient(to right, transparent 0%, black 18%, black 82%, transparent 100%);
+  -webkit-mask-composite: source-in;
+  mask-image:
+    linear-gradient(to bottom, transparent 0%, black 40%, black 62%, transparent 100%),
+    linear-gradient(to right, transparent 0%, black 18%, black 82%, transparent 100%);
+  mask-composite: intersect;
 }
 
 /* Desktop nav links */
@@ -370,6 +363,27 @@ input, textarea, select {
 .nav-link:hover::after { transform: scaleX(1); }
 
 .nav-cta { margin-left: var(--space-md); }
+
+/* Language toggle button */
+.lang-toggle {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.35);
+  color: rgba(255,255,255,0.8);
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 0.35rem 0.75rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast);
+  flex-shrink: 0;
+}
+.lang-toggle:hover {
+  background-color: rgba(255,255,255,0.1);
+  border-color: rgba(255,255,255,0.6);
+  color: var(--color-white);
+}
 
 /* ─── Hamburger button (mobile only) ─── */
 .hamburger {
@@ -545,8 +559,7 @@ input, textarea, select {
   color: var(--color-white);
   line-height: 1.15;
   margin-bottom: var(--space-lg);
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+  letter-spacing: 0.01em;
 }
 
 .hero-subtext {
@@ -741,8 +754,10 @@ input, textarea, select {
 
 .team-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   gap: var(--space-xl);
+  max-width: 680px;
+  margin-inline: auto;
 }
 
 /* Individual team card */
@@ -763,7 +778,7 @@ input, textarea, select {
 /* Photo area at the top of each team card */
 .team-card-photo {
   position: relative;
-  height: 320px;
+  height: 400px;
   overflow: hidden;
   background-color: var(--color-cream);
 }
@@ -778,6 +793,26 @@ input, textarea, select {
 }
 
 .team-card:hover .team-card-photo img {
+  transform: scale(1.04);
+}
+
+/* Initials circle — replaces photo when no headshot is used */
+.initials-avatar {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--color-navy) 0%, var(--color-navy-mid) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-serif);
+  font-size: 5rem;
+  font-weight: 700;
+  color: var(--color-white);
+  letter-spacing: 0.05em;
+  transition: transform 0.4s ease;
+}
+
+.team-card:hover .initials-avatar {
   transform: scale(1.04);
 }
 
@@ -1082,17 +1117,23 @@ a.contact-detail-value:hover { color: var(--color-maroon); }
 
 /* Footer logo */
 .footer-logo {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-sm);
+  display: inline-block;
   margin-bottom: var(--space-md);
 }
 
-.footer-brand-name {
-  font-family: var(--font-serif);
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--color-white);
+.footer-logo-img {
+  height: 92px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+  -webkit-mask-image:
+    linear-gradient(to bottom, transparent 0%, black 40%, black 62%, transparent 100%),
+    linear-gradient(to right, transparent 0%, black 18%, black 82%, transparent 100%);
+  -webkit-mask-composite: source-in;
+  mask-image:
+    linear-gradient(to bottom, transparent 0%, black 40%, black 62%, transparent 100%),
+    linear-gradient(to right, transparent 0%, black 18%, black 82%, transparent 100%);
+  mask-composite: intersect;
 }
 
 .footer-brand-desc {
@@ -1289,7 +1330,7 @@ a.contact-detail-value:hover { color: var(--color-maroon); }
 /* ── 480px and below (small mobile) ── */
 @media (max-width: 480px) {
 
-  .nav-logo-text { display: none; }  /* show just the R mark on very small screens */
+  .nav-logo-img { height: 68px; }  /* slightly smaller logo on very small screens */
 
   .hero-headline { font-size: 2rem; }
   .hero-stats    { padding-block: var(--space-md); }
@@ -1352,7 +1393,7 @@ a.contact-detail-value:hover { color: var(--color-maroon); }
 
 .buy-sell-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: var(--space-lg);
 }
 
@@ -1524,6 +1565,22 @@ a.contact-detail-value:hover { color: var(--color-maroon); }
   text-transform: uppercase;
 }
 
+.broker-attribution .broker-title {
+  color: var(--color-maroon-light);
+  font-size: 0.875rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  display: block;
+}
+
+.broker-attribution .broker-dre {
+  color: rgba(255,255,255,0.45);
+  font-size: 0.8125rem;
+  letter-spacing: 0.05em;
+  display: block;
+  margin-top: 0.25rem;
+}
+
 /* ─────────────────────────────────────────────
    FEATURED PROPERTIES SKELETON
    Ready-to-populate grid. Cards use navy
@@ -1667,6 +1724,10 @@ a.contact-detail-value:hover { color: var(--color-maroon); }
 @media (max-width: 1024px) {
   .county-grid { grid-template-columns: repeat(3, 1fr); }
   .properties-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 1024px) {
+  .buy-sell-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 768px) {

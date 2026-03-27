@@ -6,6 +6,15 @@
   <meta name="description" content="Richland Property Partners — Your trusted real estate brokerage for residential sales, investment properties, and asset management." />
   <title>Richland Property Partners</title>
 
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/Richland Logo - cropped.png" />
+
+  <!-- Open Graph / social preview -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:title"       content="Richland Property Partners" />
+  <meta property="og:description" content="Expert brokerage meets disciplined asset management — helping clients buy, sell, and build lasting wealth across Southern and Central California." />
+  <meta property="og:image"       content="assets/Richland Property full.png" />
+
   <!-- Google Fonts: Playfair Display (serif headings) + Outfit (body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -24,20 +33,22 @@
 
       <!-- Brand / Logo -->
       <a href="#home" class="nav-logo" aria-label="Richland Property Partners home">
-        <span class="nav-logo-mark">R</span>
-        <span class="nav-logo-text">Richland Property Partners</span>
+        <img src="assets/Richland Property full.png" alt="Richland Property Partners" class="nav-logo-img" />
       </a>
 
       <!-- Desktop nav links -->
       <ul class="nav-links" role="list">
-        <li><a href="#about" class="nav-link">Our Story</a></li>
-        <li><a href="#team"     class="nav-link">Team</a></li>
-        <li><a href="#services" class="nav-link">Services</a></li>
-        <li><a href="#contact"  class="nav-link">Contact</a></li>
+        <li><a href="#about"    class="nav-link" data-en="About"    data-es="Nosotros">About</a></li>
+        <li><a href="#team"     class="nav-link" data-en="Team"     data-es="Equipo">Team</a></li>
+        <li><a href="#services" class="nav-link" data-en="Services" data-es="Servicios">Services</a></li>
+        <li><a href="#contact"  class="nav-link" data-en="Contact"  data-es="Contacto">Contact</a></li>
       </ul>
 
+      <!-- Language toggle -->
+      <button id="lang-toggle" class="lang-toggle" aria-label="Toggle language">ES</button>
+
       <!-- CTA button (desktop) -->
-      <a href="#contact" class="btn btn-gold nav-cta">Get in Touch</a>
+      <a href="#contact" class="btn btn-gold nav-cta" data-en="Get in Touch" data-es="Contáctenos">Get in Touch</a>
 
       <!-- Hamburger button (mobile) -->
       <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
@@ -50,11 +61,11 @@
     <!-- Mobile menu drawer -->
     <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Mobile navigation">
       <ul class="mobile-nav-links" role="list">
-        <li><a href="#about" class="mobile-nav-link">Our Story</a></li>
-        <li><a href="#team"     class="mobile-nav-link">Team</a></li>
-        <li><a href="#services" class="mobile-nav-link">Services</a></li>
-        <li><a href="#contact"  class="mobile-nav-link">Contact</a></li>
-        <li><a href="#contact"  class="btn btn-gold mobile-cta">Get in Touch</a></li>
+        <li><a href="#about"    class="mobile-nav-link" data-en="About"    data-es="Nosotros">About</a></li>
+        <li><a href="#team"     class="mobile-nav-link" data-en="Team"     data-es="Equipo">Team</a></li>
+        <li><a href="#services" class="mobile-nav-link" data-en="Services" data-es="Servicios">Services</a></li>
+        <li><a href="#contact"  class="mobile-nav-link" data-en="Contact"  data-es="Contacto">Contact</a></li>
+        <li><a href="#contact"  class="btn btn-gold mobile-cta" data-en="Get in Touch" data-es="Contáctenos">Get in Touch</a></li>
       </ul>
     </div>
   </header>
@@ -92,40 +103,39 @@
 
       <!-- Hero content -->
       <div class="hero-content reveal">
-        <p class="hero-eyebrow">Pasadena, CA &mdash; Est. 2003</p>
-        <h1 class="hero-headline">
-          2,700+ PROPERTIES.<br />
-          20+ YEARS. ONE MISSION.
+        <p class="hero-eyebrow" data-en="Los Angeles, CA &mdash; Est. 2003" data-es="Los Ángeles, CA &mdash; Est. 2003">Los Angeles, CA &mdash; Est. 2003</p>
+        <h1 class="hero-headline" data-en="Your Trusted Partners in Real Estate" data-es="Sus Socios de Confianza en Bienes Raíces">
+          Your Trusted Partners in Real Estate
         </h1>
-        <p class="hero-subtext">
-          From distressed fix-and-flips to dream homes — two decades of hands-on California real estate experience, now working for you.
+        <p class="hero-subtext" data-en="Expert brokerage meets disciplined asset management — helping clients buy, sell, and build lasting wealth." data-es="Corretaje experto y gestión disciplinada de activos — ayudamos a comprar, vender y construir riqueza duradera.">
+          Expert brokerage meets disciplined asset management — helping clients buy, sell, and build lasting wealth.
         </p>
         <div class="hero-buttons">
-          <a href="#contact"  class="btn btn-gold btn-lg">GET STARTED TODAY</a>
-          <a href="#services" class="btn btn-outline btn-lg">EXPLORE PROPERTIES</a>
+          <a href="#contact"  class="btn btn-gold btn-lg" data-en="Get Started" data-es="Comenzar">Get Started</a>
+          <a href="#services" class="btn btn-outline btn-lg" data-en="Our Services" data-es="Nuestros Servicios">Our Services</a>
         </div>
       </div>
 
       <!-- Stats bar pinned to hero bottom -->
       <div class="hero-stats" aria-label="Key statistics">
         <div class="stat-item">
+          <span class="stat-number">2,850+</span>
+          <span class="stat-label" data-en="Transactions" data-es="Transacciones">Transactions</span>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat-item">
           <span class="stat-number">20+</span>
-          <span class="stat-label">Years Experience</span>
+          <span class="stat-label" data-en="Years Experience" data-es="Años de Experiencia">Years Experience</span>
         </div>
         <div class="stat-divider" aria-hidden="true"></div>
         <div class="stat-item">
-          <span class="stat-number">2,700+</span>
-          <span class="stat-label">Transactions Completed</span>
+          <span class="stat-number">$80M+</span>
+          <span class="stat-label" data-en="Distressed Assets" data-es="Activos en Dificultades">Distressed Assets</span>
         </div>
         <div class="stat-divider" aria-hidden="true"></div>
         <div class="stat-item">
-          <span class="stat-number">$25M+</span>
-          <span class="stat-label">Assets Managed</span>
-        </div>
-        <div class="stat-divider" aria-hidden="true"></div>
-        <div class="stat-item">
-          <span class="stat-number">10+</span>
-          <span class="stat-label">Counties Served</span>
+          <span class="stat-number">98%</span>
+          <span class="stat-label" data-en="Client Satisfaction" data-es="Satisfacción del Cliente">Client Satisfaction</span>
         </div>
       </div>
     </section>
@@ -216,26 +226,26 @@
          CREDIBILITY STATS BAR
          Key numbers from Jose's verified track record.
          =================================================== -->
-    <div class="stats-bar" aria-label="Brokerage highlights">
+    <div class="stats-bar" aria-label="Brokerage highlights" hidden>
       <div class="container stats-bar-grid">
         <div class="stats-bar-item">
-          <span class="stats-bar-number">2,700+</span>
-          <span class="stats-bar-label">Transactions Completed</span>
+          <span class="stats-bar-number">2,850+</span>
+          <span class="stats-bar-label" data-en="Transactions Completed" data-es="Transacciones Completadas">Transactions Completed</span>
         </div>
         <div class="stats-bar-divider" aria-hidden="true"></div>
         <div class="stats-bar-item">
           <span class="stats-bar-number">20+</span>
-          <span class="stats-bar-label">Years Experience</span>
+          <span class="stats-bar-label" data-en="Years Experience" data-es="Años de Experiencia">Years Experience</span>
         </div>
         <div class="stats-bar-divider" aria-hidden="true"></div>
         <div class="stats-bar-item">
-          <span class="stats-bar-number">$25M+</span>
-          <span class="stats-bar-label">Assets Managed</span>
+          <span class="stats-bar-number">$80M+</span>
+          <span class="stats-bar-label" data-en="Distressed Assets Resolved" data-es="Activos en Dificultades Resueltos">Distressed Assets Resolved</span>
         </div>
         <div class="stats-bar-divider" aria-hidden="true"></div>
         <div class="stats-bar-item">
-          <span class="stats-bar-number">10+</span>
-          <span class="stats-bar-label">Counties Served</span>
+          <span class="stats-bar-number">98%</span>
+          <span class="stats-bar-label" data-en="Client Satisfaction" data-es="Satisfacción del Cliente">Client Satisfaction</span>
         </div>
       </div>
     </div>
@@ -279,26 +289,19 @@
               <img
                 src="assets/jose-headshot.jpg"
                 alt="Jose Gutierrez, Broker at Richland Property Partners"
-                loading="lazy"
+                loading="eager"
               />
-              <span class="team-badge">Broker</span>
+              <span class="team-badge" data-en="Broker" data-es="Corredor">Broker</span>
             </div>
             <div class="team-card-body">
               <h3 class="team-name" id="jose-name">Jose Gutierrez</h3>
               <p class="team-dre">CalDRE #01847765</p>
-              <p class="team-bio">
-                Jose Gutierrez is the Broker and Founder of Richland Property Partners. A UCLA
-                graduate in International Economics and U.S. Army Reserve veteran, Jose began
-                his real estate career in 2003 — specializing in distressed fix-and-flip
-                properties across Central California. Over two decades he has completed more
-                than 2,700 residential transactions and acquired over $25 million in distressed
-                mortgage assets through his note-buying firm, River Flow Funding. Bilingual in
-                English and Spanish, Jose leads with integrity and a deep commitment to helping
-                every client achieve their real estate goals.
+              <p class="team-bio" data-en="Broker and President of Richland Property Partners. 20+ years and 2,700+ residential transactions since 2003. UCLA graduate in International Economics with graduate studies in Urban &amp; Regional Planning. Founded River Flow Funding LLC — $80M+ in distressed assets resolved. U.S. Army Reserve Combat Medic. Bilingual in English and Spanish." data-es="Corredor y Presidente de Richland Property Partners. Más de 20 años y 2,700+ transacciones residenciales desde 2003. Egresado de UCLA en Economía Internacional con estudios de posgrado en Planificación Urbana. Fundó River Flow Funding LLC — más de $80M en activos en dificultades resueltos. Médico de Combate del Ejército de los EE. UU. Bilingüe en inglés y español.">
+                Broker and President of Richland Property Partners. 20+ years and 2,700+ residential transactions since 2003. UCLA graduate in International Economics with graduate studies in Urban &amp; Regional Planning. Founded River Flow Funding LLC — $80M+ in distressed assets resolved. U.S. Army Reserve Combat Medic. Bilingual in English and Spanish.
               </p>
               <div class="team-actions">
-                <a href="mailto:jose@richlandproperty.com" class="btn btn-gold btn-sm">Email Jose</a>
-                <a href="tel:+15593044736" class="btn btn-outline-dark btn-sm">Call</a>
+                <a href="mailto:jose@richlandproperty.com" class="btn btn-gold btn-sm" data-en="Email Jose" data-es="Correo a Jose">Email Jose</a>
+                <a href="tel:+18884380026" class="btn btn-outline-dark btn-sm" data-en="Call" data-es="Llamar">Call</a>
               </div>
             </div>
           </article>
@@ -311,23 +314,17 @@
                 alt="Eddy De La Cruz, Agent and Asset Manager at Richland Property Partners"
                 loading="lazy"
               />
-              <span class="team-badge">Agent &amp; Asset Manager</span>
+              <span class="team-badge" data-en="Agent &amp; Asset Manager" data-es="Agente y Gestor de Activos">Agent &amp; Asset Manager</span>
             </div>
             <div class="team-card-body">
               <h3 class="team-name" id="eddy-name">Eddy De La Cruz</h3>
-              <p class="team-dre">DRE #XXXXXXX</p>
-              <p class="team-bio">
-                Eddy specializes in investment properties and asset management,
-                bringing a data-driven approach to every engagement. With a
-                background in portfolio strategy and property operations, he helps
-                investors identify, acquire, and maximize the performance of
-                income-generating real estate. Eddy's meticulous attention to
-                detail — from due diligence to tenant management — gives clients
-                confidence that their assets are always performing at their peak.
+              <p class="team-dre">CalDRE #02317349</p>
+              <p class="team-bio" data-en="Agent and Asset Manager specializing in investment property analysis, due diligence, and real-estate-secured strategy. Guides clients through acquisitions, portfolio planning, and property-level decisions with analytical precision and operational insight." data-es="Agente y Gestor de Activos especializado en análisis de propiedades de inversión, diligencia debida y estrategia respaldada en bienes raíces. Guía a los clientes en adquisiciones, planificación de cartera y decisiones a nivel de propiedad con precisión analítica.">
+                Agent and Asset Manager specializing in investment property analysis, due diligence, and real-estate-secured strategy. Guides clients through acquisitions, portfolio planning, and property-level decisions with analytical precision and operational insight.
               </p>
               <div class="team-actions">
-                <a href="mailto:eddy@richlandproperty.com" class="btn btn-gold btn-sm">Email Eddy</a>
-                <a href="tel:+15555550102" class="btn btn-outline-dark btn-sm">Call</a>
+                <a href="mailto:eddy@richlandproperty.com" class="btn btn-gold btn-sm" data-en="Email Eddy" data-es="Correo a Eddy">Email Eddy</a>
+                <a href="tel:+18884380026" class="btn btn-outline-dark btn-sm" data-en="Call" data-es="Llamar">Call</a>
               </div>
             </div>
           </article>
@@ -354,23 +351,27 @@
 
         <div class="services-grid">
 
-          <!-- Service 1 -->
+          <!-- Row 1: REO, Investment Properties, Asset Management -->
+
+          <!-- REO Properties -->
           <article class="service-card reveal">
             <div class="service-card-inner">
               <div class="service-icon" aria-hidden="true">
                 <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M6 42V18L24 6l18 12v24H6z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-                  <path d="M18 42V30h12v12" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                  <rect x="6" y="10" width="36" height="28" rx="2" stroke="currentColor" stroke-width="2"/>
+                  <path d="M14 10V8a2 2 0 012-2h16a2 2 0 012 2v2" stroke="currentColor" stroke-width="2"/>
+                  <path d="M6 22h36M18 22v16M30 22v16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  <circle cx="24" cy="16" r="2" fill="currentColor"/>
                 </svg>
               </div>
-              <h3 class="service-title">Residential Sales</h3>
-              <p class="service-desc">
-                Expert guidance for buyers and sellers navigating California's competitive residential market. We handle everything from listing to close.
+              <h3 class="service-title" data-en="REO Properties" data-es="Propiedades REO">REO Properties</h3>
+              <p class="service-desc" data-en="Specialists in bank-owned and lender-owned properties. We bring deep distressed-asset experience to REO listings, acquisitions, and disposition strategies." data-es="Especialistas en propiedades de bancos y prestamistas. Llevamos amplia experiencia en activos en dificultades a listados REO, adquisiciones y estrategias de disposición.">
+                Specialists in bank-owned and lender-owned properties. We bring deep distressed-asset experience to REO listings, acquisitions, and disposition strategies.
               </p>
             </div>
           </article>
 
-          <!-- Service 2 -->
+          <!-- Investment Properties -->
           <article class="service-card reveal reveal--delay">
             <div class="service-card-inner">
               <div class="service-icon" aria-hidden="true">
@@ -380,14 +381,14 @@
                   <path d="M24 24v8M20 28h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                 </svg>
               </div>
-              <h3 class="service-title">Investment Properties</h3>
-              <p class="service-desc">
+              <h3 class="service-title" data-en="Investment Properties" data-es="Propiedades de Inversión">Investment Properties</h3>
+              <p class="service-desc" data-en="Identify, evaluate, and acquire income-generating properties. We align investment opportunities with your financial objectives and risk profile." data-es="Identifique, evalúe y adquiera propiedades generadoras de ingresos. Alineamos las oportunidades de inversión con sus objetivos financieros y perfil de riesgo.">
                 Identify, evaluate, and acquire income-generating properties. We align investment opportunities with your financial objectives and risk profile.
               </p>
             </div>
           </article>
 
-          <!-- Service 3 -->
+          <!-- Asset Management -->
           <article class="service-card reveal reveal--delay-2">
             <div class="service-card-inner">
               <div class="service-icon" aria-hidden="true">
@@ -398,46 +399,48 @@
                   <rect x="26" y="26" width="14" height="14" rx="2" stroke="currentColor" stroke-width="2"/>
                 </svg>
               </div>
-              <h3 class="service-title">Asset Management</h3>
-              <p class="service-desc">
+              <h3 class="service-title" data-en="Asset Management" data-es="Gestión de Activos">Asset Management</h3>
+              <p class="service-desc" data-en="Comprehensive portfolio strategy and day-to-day property management — maximizing returns while minimizing your operational burden." data-es="Estrategia integral de cartera y gestión diaria de propiedades: maximizando rendimientos y minimizando su carga operativa.">
                 Comprehensive portfolio strategy and day-to-day property management — maximizing returns while minimizing your operational burden.
               </p>
             </div>
           </article>
 
-          <!-- Service 4 -->
+          <!-- Row 2: Probate, Residential, Commercial -->
+
+          <!-- Probate Real Estate -->
           <article class="service-card reveal">
             <div class="service-card-inner">
               <div class="service-icon" aria-hidden="true">
                 <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M8 36l10-12 8 8 6-10 10 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  <rect x="6" y="6" width="36" height="36" rx="2" stroke="currentColor" stroke-width="2"/>
+                  <path d="M24 6l4 8h10l-8 6 3 10-9-6-9 6 3-10-8-6h10z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                  <path d="M12 36v6M36 36v6M8 42h32" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                 </svg>
               </div>
-              <h3 class="service-title">Market Analysis</h3>
-              <p class="service-desc">
-                Data-driven insights, comparative market analyses, and property valuations that empower smarter decisions at every stage of a transaction.
+              <h3 class="service-title" data-en="Probate Real Estate" data-es="Bienes Raíces en Sucesión">Probate Real Estate</h3>
+              <p class="service-desc" data-en="Experienced guidance through the sale of estate properties. We work with executors, heirs, and attorneys to navigate probate transactions with sensitivity and efficiency." data-es="Guía experta en la venta de propiedades sucesorias. Trabajamos con ejecutores, herederos y abogados para navegar transacciones de sucesión con sensibilidad y eficiencia.">
+                Experienced guidance through the sale of estate properties. We work with executors, heirs, and attorneys to navigate probate transactions with sensitivity and efficiency.
               </p>
             </div>
           </article>
 
-          <!-- Service 5 -->
+          <!-- Residential Sales -->
           <article class="service-card reveal reveal--delay">
             <div class="service-card-inner">
               <div class="service-icon" aria-hidden="true">
                 <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="24" cy="24" r="16" stroke="currentColor" stroke-width="2"/>
-                  <path d="M24 16v8l6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M6 42V18L24 6l18 12v24H6z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                  <path d="M18 42V30h12v12" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
                 </svg>
               </div>
-              <h3 class="service-title">Advisory Services</h3>
-              <p class="service-desc">
-                Personalized real estate consulting tailored to your unique situation — whether you're planning a first purchase or restructuring a large portfolio.
+              <h3 class="service-title" data-en="Residential Sales" data-es="Ventas Residenciales">Residential Sales</h3>
+              <p class="service-desc" data-en="Expert guidance for buyers and sellers navigating California's competitive residential market. We handle everything from listing to close." data-es="Orientación experta para compradores y vendedores en el competitivo mercado residencial de California. Manejamos todo, desde el listado hasta el cierre.">
+                Expert guidance for buyers and sellers navigating California's competitive residential market. We handle everything from listing to close.
               </p>
             </div>
           </article>
 
-          <!-- Service 6 -->
+          <!-- Commercial Real Estate -->
           <article class="service-card reveal reveal--delay-2">
             <div class="service-card-inner">
               <div class="service-icon" aria-hidden="true">
@@ -448,43 +451,43 @@
                   <path d="M20 28v14M28 28v14" stroke="currentColor" stroke-width="2"/>
                 </svg>
               </div>
-              <h3 class="service-title">Commercial Real Estate</h3>
-              <p class="service-desc">
+              <h3 class="service-title" data-en="Commercial Real Estate" data-es="Bienes Raíces Comerciales">Commercial Real Estate</h3>
+              <p class="service-desc" data-en="Office, retail, and commercial property leasing and acquisitions — backed by expert negotiation and market positioning strategies." data-es="Arrendamiento y adquisiciones de propiedades de oficina, comercio y uso comercial, respaldados por negociación experta y estrategias de posicionamiento.">
                 Office, retail, and commercial property leasing and acquisitions — backed by expert negotiation and market positioning strategies.
               </p>
             </div>
           </article>
 
-          <!-- Service 7 -->
+          <!-- Row 3: Market Analysis, Advisory Services -->
+
+          <!-- Market Analysis -->
           <article class="service-card reveal">
             <div class="service-card-inner">
               <div class="service-icon" aria-hidden="true">
                 <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M24 6l4 8h10l-8 6 3 10-9-6-9 6 3-10-8-6h10z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-                  <path d="M12 36v6M36 36v6M8 42h32" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M8 36l10-12 8 8 6-10 10 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <rect x="6" y="6" width="36" height="36" rx="2" stroke="currentColor" stroke-width="2"/>
                 </svg>
               </div>
-              <h3 class="service-title">Probate Real Estate</h3>
-              <p class="service-desc">
-                Experienced guidance through the sale of estate properties. We work with executors, heirs, and attorneys to navigate probate transactions with sensitivity and efficiency.
+              <h3 class="service-title" data-en="Market Analysis" data-es="Análisis de Mercado">Market Analysis</h3>
+              <p class="service-desc" data-en="Data-driven insights, comparative market analyses, and property valuations that empower smarter decisions at every stage of a transaction." data-es="Perspectivas basadas en datos, análisis comparativos de mercado y valoraciones de propiedades que impulsan decisiones más inteligentes en cada etapa.">
+                Data-driven insights, comparative market analyses, and property valuations that empower smarter decisions at every stage of a transaction.
               </p>
             </div>
           </article>
 
-          <!-- Service 8 -->
+          <!-- Advisory Services -->
           <article class="service-card reveal reveal--delay">
             <div class="service-card-inner">
               <div class="service-icon" aria-hidden="true">
                 <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect x="6" y="10" width="36" height="28" rx="2" stroke="currentColor" stroke-width="2"/>
-                  <path d="M14 10V8a2 2 0 012-2h16a2 2 0 012 2v2" stroke="currentColor" stroke-width="2"/>
-                  <path d="M6 22h36M18 22v16M30 22v16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                  <circle cx="24" cy="16" r="2" fill="currentColor"/>
+                  <circle cx="24" cy="24" r="16" stroke="currentColor" stroke-width="2"/>
+                  <path d="M24 16v8l6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                 </svg>
               </div>
-              <h3 class="service-title">REO Properties</h3>
-              <p class="service-desc">
-                Specialists in bank-owned and lender-owned properties. We bring deep distressed-asset experience to REO listings, acquisitions, and disposition strategies.
+              <h3 class="service-title" data-en="Advisory Services" data-es="Servicios de Asesoría">Advisory Services</h3>
+              <p class="service-desc" data-en="Personalized real estate consulting tailored to your unique situation — whether you're planning a first purchase or restructuring a large portfolio." data-es="Consultoría inmobiliaria personalizada según su situación — ya sea que planifique su primera compra o reestructure un portafolio grande.">
+                Personalized real estate consulting tailored to your unique situation — whether you're planning a first purchase or restructuring a large portfolio.
               </p>
             </div>
           </article>
@@ -500,35 +503,45 @@
     <section class="buy-sell section" id="buy-sell" aria-labelledby="buy-sell-heading">
       <div class="container">
         <div class="section-header reveal">
-          <p class="section-eyebrow">Ready to Move?</p>
-          <h2 class="section-heading" id="buy-sell-heading">How Can We Help You?</h2>
-          <p class="section-subtext">Whether you're buying your first home or selling an investment property, our team guides you every step of the way.</p>
+          <p class="section-eyebrow" data-en="Ready to Move?" data-es="¿Listo para Actuar?">Ready to Move?</p>
+          <h2 class="section-heading" id="buy-sell-heading" data-en="How Can We Help You?" data-es="¿Cómo Podemos Ayudarle?">How Can We Help You?</h2>
+          <p class="section-subtext" data-en="Whether you're a first-time buyer, a seller, or an institutional investor seeking distressed assets — our team has the expertise to guide every move." data-es="Ya sea comprador primerizo, vendedor o inversor institucional en busca de activos en dificultades — nuestro equipo tiene la experiencia para guiar cada paso.">Whether you're a first-time buyer, a seller, or an institutional investor seeking distressed assets — our team has the expertise to guide every move.</p>
         </div>
 
         <div class="buy-sell-grid">
           <!-- Buying card -->
           <article class="buy-sell-card reveal">
-            <!-- TODO: Replace gradient with property exterior photo when available -->
             <div class="buy-sell-card-bg"></div>
             <div class="buy-sell-card-overlay"></div>
             <div class="buy-sell-card-content">
-              <p class="buy-sell-label">For Buyers</p>
-              <h3>Purchasing a New Home</h3>
-              <p>Find the perfect property with expert guidance from search to close. We advocate for you at every step.</p>
-              <a href="#contact" class="btn btn-outline">Get Started &rarr;</a>
+              <p class="buy-sell-label" data-en="For Buyers" data-es="Para Compradores">For Buyers</p>
+              <h3 data-en="Purchasing a Property" data-es="Comprando una Propiedad">Purchasing a Property</h3>
+              <p data-en="Find the right property with expert guidance from search to close. We advocate for your interests at every step." data-es="Encuentre la propiedad adecuada con orientación experta desde la búsqueda hasta el cierre. Defendemos sus intereses en cada paso.">Find the right property with expert guidance from search to close. We advocate for your interests at every step.</p>
+              <a href="#contact" class="btn btn-outline" data-en="Get Started &rarr;" data-es="Comenzar &rarr;">Get Started &rarr;</a>
             </div>
           </article>
 
           <!-- Selling card -->
           <article class="buy-sell-card reveal reveal--delay">
-            <!-- TODO: Replace gradient with property exterior photo when available -->
             <div class="buy-sell-card-bg buy-sell-card-bg--sell"></div>
             <div class="buy-sell-card-overlay"></div>
             <div class="buy-sell-card-content">
-              <p class="buy-sell-label">For Sellers</p>
-              <h3>Selling Your Home</h3>
-              <p>Get maximum value for your property with our proven marketing strategy, pricing expertise, and negotiation skills.</p>
-              <a href="#contact" class="btn btn-outline">Get Started &rarr;</a>
+              <p class="buy-sell-label" data-en="For Sellers" data-es="Para Vendedores">For Sellers</p>
+              <h3 data-en="Selling Your Property" data-es="Vendiendo su Propiedad">Selling Your Property</h3>
+              <p data-en="Get maximum value with our proven marketing strategy, pricing expertise, and negotiation skills. From listing to close." data-es="Obtenga el máximo valor con nuestra estrategia de marketing, experiencia en precios y habilidades de negociación. Del listado al cierre.">Get maximum value with our proven marketing strategy, pricing expertise, and negotiation skills. From listing to close.</p>
+              <a href="#contact" class="btn btn-outline" data-en="Get Started &rarr;" data-es="Comenzar &rarr;">Get Started &rarr;</a>
+            </div>
+          </article>
+
+          <!-- Institutional Investors & Banks card -->
+          <article class="buy-sell-card reveal reveal--delay-2">
+            <div class="buy-sell-card-bg" style="background: linear-gradient(135deg, #0d2a52 0%, #1a1a2e 50%, #2d1f3d 100%);"></div>
+            <div class="buy-sell-card-overlay"></div>
+            <div class="buy-sell-card-content">
+              <p class="buy-sell-label" data-en="For Investors &amp; Banks" data-es="Para Inversores y Bancos">For Investors &amp; Banks</p>
+              <h3 data-en="Institutional &amp; REO Solutions" data-es="Soluciones Institucionales y REO">Institutional &amp; REO Solutions</h3>
+              <p data-en="We partner with lenders, servicers, and institutional investors to acquire, manage, and dispose of distressed and bank-owned assets at scale." data-es="Nos asociamos con prestamistas, administradores e inversores institucionales para adquirir, gestionar y disponer de activos en dificultades y bancarios a escala.">We partner with lenders, servicers, and institutional investors to acquire, manage, and dispose of distressed and bank-owned assets at scale.</p>
+              <a href="#contact" class="btn btn-outline" data-en="Let's Talk &rarr;" data-es="Hablemos &rarr;">Let's Talk &rarr;</a>
             </div>
           </article>
         </div>
@@ -553,25 +566,25 @@
         <div class="broker-quote-wrap">
           <span class="broker-quote-mark" aria-hidden="true">&ldquo;</span>
           <blockquote class="broker-quote" id="broker-quote-id">
-            I&rsquo;ve been on both sides of over 2,700 real estate transactions.
+            I&rsquo;ve been on both sides of over 2,850 real estate transactions.
             That experience doesn&rsquo;t just build expertise &mdash; it builds
             the understanding to know exactly what our clients are risking,
             and the skill to protect it.
           </blockquote>
           <p class="broker-attribution">
-            &mdash; Jose Gutierrez, Broker &amp; Founder, CalDRE #01847765<br />
-            <span>Richland Property Partners</span>
+            &mdash; Jose Gutierrez<br />
+            <span class="broker-title">Founder &amp; Broker</span>
+            <span class="broker-dre">DRE #01847765</span>
           </p>
         </div>
       </div>
     </section>
 
     <!-- ===================================================
-         FEATURED PROPERTIES SKELETON
-         Structure is ready to populate with real listings.
-         Replace placeholder cards with real data.
+         FEATURED PROPERTIES — HIDDEN (remove `hidden` attr when listings ready)
          =================================================== -->
-    <section class="featured-properties section" id="featured-properties" aria-labelledby="featured-heading">
+    <!-- SECTION: Featured Properties -->
+    <section class="featured-properties section" id="featured-properties" aria-labelledby="featured-heading" hidden>
       <div class="container">
         <div class="section-header reveal">
           <p class="section-eyebrow">Portfolio</p>
@@ -631,11 +644,14 @@
     </section>
 
     <!-- ===================================================
-         PROPERTY SEARCH BY COUNTY
+         COUNTY SEARCH — HIDDEN (remove `hidden` attr when MLS links ready)
+         =================================================== -->
+    <!-- SECTION: County Search -->
+    <!-- PROPERTY SEARCH BY COUNTY
          Clickable region tiles. Add href links to
          MLS search or listings pages when ready.
          =================================================== -->
-    <section class="county-search section" id="county-search" aria-labelledby="county-heading">
+    <section class="county-search section" id="county-search" aria-labelledby="county-heading" hidden>
       <div class="container">
         <div class="section-header reveal">
           <p class="section-eyebrow">Explore Our Markets</p>
@@ -695,8 +711,8 @@
                 </svg>
               </div>
               <div>
-                <p class="contact-detail-label">Phone</p>
-                <a href="tel:+15593044736" class="contact-detail-value">(559) 304-4736</a>
+                <p class="contact-detail-label" data-en="Phone" data-es="Teléfono">Phone</p>
+                <a href="tel:+18884380026" class="contact-detail-value">(888) 438-0026</a>
               </div>
             </li>
             <li class="contact-detail-item">
@@ -707,8 +723,8 @@
                 </svg>
               </div>
               <div>
-                <p class="contact-detail-label">Email</p>
-                <a href="mailto:info@richlandproperty.com" class="contact-detail-value">info@richlandproperty.com</a>
+                <p class="contact-detail-label" data-en="Email" data-es="Correo">Email</p>
+                <a href="mailto:admin@richlandprop.com" class="contact-detail-value">admin@richlandprop.com</a>
               </div>
             </li>
             <li class="contact-detail-item">
@@ -719,19 +735,8 @@
                 </svg>
               </div>
               <div>
-                <p class="contact-detail-label">Office</p>
-                <p class="contact-detail-value">556 S. Fair Oaks Ave, Suite 431<br />Pasadena, CA 91105</p>
-              </div>
-            </li>
-            <li class="contact-detail-item">
-              <div class="contact-detail-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/>
-                </svg>
-              </div>
-              <div>
-                <p class="contact-detail-label">LinkedIn</p>
-                <a href="https://www.linkedin.com/in/jgriverflow/" class="contact-detail-value" target="_blank" rel="noopener noreferrer">linkedin.com/in/jgriverflow</a>
+                <p class="contact-detail-label" data-en="Office" data-es="Oficina">Office</p>
+                <p class="contact-detail-value">Los Angeles, CA</p>
               </div>
             </li>
           </ul>
@@ -740,6 +745,10 @@
         <!-- Contact form column -->
         <div class="contact-form-wrapper reveal reveal--delay">
           <form class="contact-form" id="contact-form" novalidate aria-label="Contact form">
+            <!-- Web3Forms: get your free access key at https://web3forms.com -->
+            <input type="hidden" name="access_key" value="YOUR-WEB3FORMS-ACCESS-KEY-HERE" />
+            <input type="hidden" name="subject" value="New inquiry — Richland Property Partners" />
+            <input type="hidden" name="from_name" value="Richland Property Partners Website" />
             <div class="form-row">
               <div class="form-group">
                 <label for="first-name" class="form-label">First Name</label>
@@ -767,7 +776,9 @@
                 <option value="buying">Buying</option>
                 <option value="selling">Selling</option>
                 <option value="investing">Investing</option>
+                <option value="institutional">Institutional / REO / Bank Assets</option>
                 <option value="property-management">Property Management</option>
+                <option value="probate">Probate Real Estate</option>
                 <option value="other">Other</option>
               </select>
             </div>
@@ -797,14 +808,13 @@
         <!-- Column 1: Brand -->
         <div class="footer-col footer-brand">
           <a href="#home" class="footer-logo" aria-label="Richland Property Partners home">
-            <span class="nav-logo-mark">R</span>
-            <span class="footer-brand-name">Richland Property Partners</span>
+            <img src="assets/Richland Property full.png" alt="Richland Property Partners" class="footer-logo-img" />
           </a>
           <p class="footer-brand-desc">
             A full-service real estate brokerage committed to delivering expert
             guidance, trusted relationships, and lasting results for every client.
           </p>
-          <p class="footer-lic">CalDRE #01847765 — Jose Gutierrez, Broker</p>
+          <p class="footer-lic">CalDRE #01847765 | Licensed in the State of California</p>
         </div>
 
         <!-- Column 2: Quick Links -->
@@ -812,7 +822,7 @@
           <h3 class="footer-heading">Quick Links</h3>
           <ul class="footer-links" role="list">
             <li><a href="#home"     class="footer-link">Home</a></li>
-            <li><a href="#about" class="footer-link">Our Story</a></li>
+            <li><a href="#about" class="footer-link">About</a></li>
             <li><a href="#team"     class="footer-link">Our Team</a></li>
             <li><a href="#services" class="footer-link">Services</a></li>
             <li><a href="#contact"  class="footer-link">Contact</a></li>
@@ -837,10 +847,9 @@
         <div class="footer-col">
           <h3 class="footer-heading">Contact</h3>
           <address class="footer-contact" style="font-style: normal;">
-            <p>556 S. Fair Oaks Ave, Ste 431</p>
-            <p>Pasadena, CA 91105</p>
-            <a href="tel:+15593044736"  class="footer-link footer-contact-link">(559) 304-4736</a>
-            <a href="mailto:info@richlandproperty.com" class="footer-link footer-contact-link">info@richlandproperty.com</a>
+            <p>Los Angeles, CA</p>
+            <a href="tel:+18884380026" class="footer-link footer-contact-link">(888) 438-0026</a>
+            <a href="mailto:admin@richlandprop.com" class="footer-link footer-contact-link">admin@richlandprop.com</a>
           </address>
         </div>
 

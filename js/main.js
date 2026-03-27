@@ -41,6 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const hamburger  = document.getElementById('hamburger');
   const mobileMenu = document.getElementById('mobile-menu');
   const contactForm = document.getElementById('contact-form');
+  const langToggle  = document.getElementById('lang-toggle');
 
 
   /* ==============================================================
@@ -239,16 +240,34 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
-      // --- Simulate successful submission ---
-      // TODO: Replace this block with a real fetch() to your form endpoint, e.g.:
-      //
-      //   fetch('/api/contact', {
-      //     method: 'POST',
-      //     headers: { 'Content-Type': 'application/json' },
-      //     body: JSON.stringify(data),
-      //   }).then(res => res.ok ? showFormSuccess() : showFormError('Server error.'));
-      //
-      showFormSuccess(data.firstName);
+      // --- Submit to Web3Forms ---
+      // Combines first + last name into a single "name" field for the email.
+      const formData = new FormData(contactForm);
+      formData.set('name', `${data.firstName} ${data.lastName}`);
+
+      const submitBtn = contactForm.querySelector('button[type="submit"]');
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending…';
+
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData,
+      })
+        .then((res) => res.json())
+        .then((result) => {
+          if (result.success) {
+            showFormSuccess(data.firstName);
+          } else {
+            showFormError(result.message || 'Something went wrong. Please try again.');
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Send Message';
+          }
+        })
+        .catch(() => {
+          showFormError('Unable to send your message. Please email us directly at admin@richlandprop.com');
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Send Message';
+        });
     });
   }
 
@@ -347,6 +366,46 @@ document.addEventListener('DOMContentLoaded', () => {
     const div = document.createElement('div');
     div.textContent = str;
     return div.innerHTML;
+  }
+
+
+  /* ==============================================================
+     6. LANGUAGE TOGGLE (English ↔ Spanish)
+        Elements carry data-en and data-es attributes.
+        Clicking the toggle button swaps all translatable text.
+     ============================================================== */
+  let currentLang = 'en';
+
+  function setLanguage(lang) {
+    currentLang = lang;
+    document.documentElement.lang = lang;
+
+    // Update button label: shows the OTHER language as the option
+    if (langToggle) {
+      langToggle.textContent = lang === 'en' ? 'ES' : 'EN';
+      langToggle.setAttribute('aria-label', lang === 'en' ? 'Switch to Spanish' : 'Switch to English');
+    }
+
+    // Swap text content on all elements that carry data-en / data-es
+    document.querySelectorAll('[data-en]').forEach((el) => {
+      const text = el.getAttribute(`data-${lang}`);
+      if (!text) return;
+
+      // Use innerHTML so HTML entities (e.g. &rarr;, &amp;) render correctly
+      el.innerHTML = text;
+    });
+
+    // Swap select option text (data-en-label / data-es-label)
+    document.querySelectorAll('[data-en-label]').forEach((el) => {
+      const label = el.getAttribute(`data-${lang}-label`);
+      if (label) el.textContent = label;
+    });
+  }
+
+  if (langToggle) {
+    langToggle.addEventListener('click', () => {
+      setLanguage(currentLang === 'en' ? 'es' : 'en');
+    });
   }
 
 });  // end DOMContentLoaded
